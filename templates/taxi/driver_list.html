@@ -5,14 +5,14 @@
   <table>
     <thead>
       <tr>
-        <th>ID</th>
+        <th>Username</th>
         <th>License number</th>
       </tr>
     </thead>
     <tbody>
     {% for driver in driver_list %}
       <tr>
-        <td><a href="{% url "taxi:driver-detail" driver.id %}">{{ driver.id }}</a></td>
+        <td><a href="{% url "taxi:driver-detail" driver.id %}">{{ driver.username }}</a></td>
         <td>{{ driver.license_number }}</td>
       </tr>
     {% endfor %}
